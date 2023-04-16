@@ -25,20 +25,17 @@ function List() {
 
     <div className="whole">
       <div className="navbar">
-        <div className="add-form">
-          <Link to="/form" className="FormButton">Add Venue</Link>
-        </div>
 
-        <div className = "logo">
+        {/* <div className = "logo">
           <h1> hi, user </h1>
-        </div>
+        </div> */}
 
         <div className = "add-form">
 
           <Link to="/form"  className = "FormButton">Add Venue</Link>
 
-          </div>
-          <div className = "list">
+        </div>
+        <div className = "list">
           <Link to="/"  className = "FormButton">Venues</Link>
 
         </div>

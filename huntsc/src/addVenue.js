@@ -94,42 +94,49 @@ function AddVenue() {
         <form onSubmit={handleSubmit}>
           <h1>Add a Venue</h1>
           <label>
-            Organization Name:
-            {/* <input id = "org" type="text" name="organization"  placeholder = "Tell us about your blablabla!" onChange={(e) => handleChangeInput(e)}/> */}
-            <input id="org" type="text" name="organization" placeholder="Tell us about your blablabla!" />
+            Organization Name
+            <input id="org" type="text" name="organization" placeholder="Tell us your name or organizations name!" onChange={(e) => handleChangeInput(e)}/>
           </label>
 
           <label>
             Contact Info
             {/* <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/> */}
-            <input id="info" type="text" name="info" placeholder="(XXX)XXX-XXXX" />
+            <input id="contact" type="text" name="info" placeholder="(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/>
           </label>
 
           <label className='fryft2'>
             <div id="question">Within Fryft?</div>
             <div id="fryft3">
-              <input id="fryft" type="checkbox" name="checkbox" value=""></input>
+              <input id="fryft" type="checkbox" name="checkbox" value="" onChange={(e) => handleChangeInput(e)}></input>
             </div>
           </label>
           <label>
             Venue Price
-            <input id="price" type="number" min="0" step="any" />
+            <input id="venue_price" type="number" min="0" step="any" placeholder = "Ex: 1000" onChange={(e) => handleChangeInput(e)}/>
+          </label>
+          <label>
+            Security Deposit
+            <input id="deposit" type="number" min="0" step="any" placeholder = "Ex: 300" onChange={(e) => handleChangeInput(e)}/>
           </label>
           <label>
             Venue Capacity
-            <input id="cap" type="text" name="vanue_cap" placeholder="What is your venue's capacity?" />
+            <input id="capacity" type="text" name="venue_cap" placeholder="What is your venue's capacity?" onChange={(e) => handleChangeInput(e)}/>
           </label>
 
           <label>
             Venue Requirements
-            <input id="req" type="text" name="des" placeholder="Requirements for your venue" onChange={(e) => handleChangeInput(e)} />
+            <input id="requirements" type="text" name="des" placeholder="Requirements for your venue" onChange={(e) => handleChangeInput(e)} />
           </label>
           <label>
             Other Info
             <input id="other" type="text" name="des" placeholder="Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)} />
           </label>
+          <div >
+            <button onClick={handleSubmit} className = "finish-buttons"> Submit </button>
+            <button type = "reset" value = "reset" className = "finish-buttons"> Reset </button>
+          </div>
+          
 
-          <button onClick={handleSubmit}> Submit </button>
 
           {/* TODO: onsubmit */}
 
