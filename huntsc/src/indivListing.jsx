@@ -1,7 +1,7 @@
 import React from "react";
 import './indivListing.css';
 import './App.css';
-
+import {Link} from "react-router-dom";
 
 function Events(props) {
     // console.log(props.start)
@@ -16,7 +16,7 @@ function Events(props) {
                 <h3 className="right">Contact: {props.contact}</h3>  
                 <h3 className="right">Other: {props.other} </h3>
                 <h3 className="right">Requirements: {props.requirements} </h3>
-                <h3 className="right">Security Deposit: {props.security-deposit} </h3>
+                <h3 className="right">Security Deposit: {props.deposit} </h3>
                 <h3 className="right">Price: {props.venue_price} </h3>
                 <h3 className="right">Capacity: {props.capacity} </h3>
             </div>
