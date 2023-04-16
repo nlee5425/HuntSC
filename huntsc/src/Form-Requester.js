@@ -76,19 +76,22 @@ function NameForm() {
         <input id = "org" type="text" name="organization"  placeholder = "Tell us about your organization!" onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Contact Info
-        
+        Contact Info:
         <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Date
-       
+        Date: 
+        <br> 
+      </br>
         <input id = "date" type="date" name="date" placeholder = "When is your event? " onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Description
+        Description:
         <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
       </label>
+
+      <br>
+      </br>
       
       <button onClick = {handleSubmit}> Submit </button>
      

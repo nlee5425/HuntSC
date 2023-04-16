@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
+
 body {
     background-color: #F0E6EF;
 }
 
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+    background-color: #F0A6CA;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    border-width: 0.5px;
+
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
 form {
+    font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #EFC3E6;
@@ -23,6 +46,6 @@ input {
 }
 
 input[type=text]:focus {
-    background-color: lightblue;
-    border: 3px solid #555;
+    background-color: F0E6EF;
+    border: 3px white;
 }
