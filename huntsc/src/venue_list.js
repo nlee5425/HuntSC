@@ -25,7 +25,7 @@ function List() {
     <div>
       <div className = "navbar">
         <div className = "add-form">
-          <Link to="/request_form"  className = "FormButton">Request Venue</Link>
+          <Link to="/form"  className = "FormButton">Add Venue</Link>
 
           </div>
           <div className = "list">
