@@ -40,14 +40,14 @@ function List() {
         </div>
       </div>
 
+      <h2 className = "title">HuntSC</h2>
 
-      <h1 className="title">Venues</h1>
-
-      <div className="whole-list">
+      <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
+      <div className = "whole-list">
         <div>
-          {venues.map((e, index) => {
-            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} deposit={e.deposit} venue_price={e.venue_price} other={e.other} />
-          })}
+        {venues.map((e, index) => { 
+            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} deposit={e.deposit} venue_price={e.venue_price} other={e.other}/>
+        })}
         </div>
       </div>
     </div>
