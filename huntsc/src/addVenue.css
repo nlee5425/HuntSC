@@ -56,6 +56,9 @@ info
  .fryft2 {
   margin-bottom: 5px;
   margin-top: 5px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -68,14 +71,38 @@ info
 #fryft {
   width: 30px;
   cursor: pointer;
+  zoom: 1.5;
 }
 
 .finish-buttons{
   margin-left: 10px;
   margin-right: 10px;
+  border-color: black;
 }
 
-.finish-buttons {
-  margin-left: 10px;
-  margin-right: 10px;
+.submit-button {
+  border: 2px solid black;
+  width: 80%;
+  height: line-height;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+  font-weight: lighter;
+  padding-top: 4.5px;
+  padding-bottom: 4.5px;
+  font-family: 'Raleway', sans-serif;
+  background-color: #efc3e6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: white;
+  color: black;
+}
+
+.button-cont {
+  display: flex;
+  align-items: center;
+  margin: auto;
 }

@@ -15,17 +15,23 @@ function NameForm() {
   const [info, setInfo] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
+  const[email, setEmail] = useState("");
 
   function handleSubmit(event) {
-    alert('A form was submitted: ' + organization);
-    event.preventDefault();
+    alert('A form was uiefhishfhsifhhifherhi: ' + organization);
 
     addDoc(collection(db, "Requests"), {
       organization: organization,
       info:info,
       date:date,
-      description: description
+      description: description,
+      email:email
     }).then(console.log( organization + info + date +  description));
+    
+    // code to redirect back to the venue list page
+
+
+    
   }
   //here I will call the from.js file 
   const handleChangeInput = (event) =>{
@@ -46,6 +52,9 @@ function NameForm() {
     if(id === "des"){
       setDescription(value);
     }
+    if(id === "email"){
+        setEmail(value);
+      }
 
   }
 
@@ -74,7 +83,7 @@ function NameForm() {
     <div className = "bigForm">
 
 
-    <form onSubmit={handleSubmit}>
+    <form>
         <h1>Request This Space</h1>
       <label>
         Organization Name:
@@ -95,10 +104,18 @@ function NameForm() {
         <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
       </label>
 
+      <label>
+        Email:
+        <br> 
+      </br>
+        <input id = "email" type="email" name="email" palceholder = "A good email." onChange={(e) => handleChangeInput(e)}/>
+      </label>
+
+
       <br>
       </br>
       
-      <button onClick = {handleSubmit}> Submit </button>
+      <Link to="/" onClick = {handleSubmit}> Submit </Link>
      
     </form>
 
