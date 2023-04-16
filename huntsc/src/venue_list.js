@@ -3,15 +3,16 @@ import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
 
 
+
 function List() {
     const [venues, setVenues] = useState([]);
 
   useEffect(() => {
-    const eventcol = collection(db, "event");
+    const eventcol = collection(db, "Venue");
     getDocs(eventcol).then(snapshot => {
       const docsArray = snapshot.docs.map(d => {return d.data()})
       console.log(docsArray);
-      setEvents(docsArray);
+      setVenues(docsArray);
     });
   },[])
   
@@ -20,10 +21,10 @@ function List() {
     <div>
       <div className = "whole-list">
 
-        <h1 className = "title">Events</h1>
+        <h1 className = "title">Venues</h1>
         <div>
         {venues.map((e, index) => { 
-            return <h1 key={index} title={e.name} start={e.start.toString()} end={e.end.toString()} description={e.description} organization={e.organization} location={e.location}/>
+            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} security-deposit={e.security-deposit} venue_price={e.venue_price} other={e.other}/>
         })}
         </div>
       </div>
