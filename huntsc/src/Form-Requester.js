@@ -1,31 +1,31 @@
+import { doc, setDoc } from "firebase/firestore"; 
+
 import { useState, React } from 'react';
-//import { db } from './firebase';
-//import { collection, addDoc } from "firebase/firestore";
+import { db } from './firebase';
+import { collection, addDoc } from "firebase/firestore";
 //import { Outlet, Link } from "react-router-dom";
 import './App.css';
 import './Form-Requester.css';
+import './navbar.css';
+import {Link} from "react-router-dom";
 
 
 function NameForm() {
-  const [name, setName] = useState('');
   const [organization, setOrganization] = useState("");
-  const [start, setStart] = useState("");
-  const [end, setEnd] = useState("");
-  const [location, setLocation] = useState("");
+  const [info, setInfo] = useState("");
+  const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
 
   function handleSubmit(event) {
-    alert('A form was submitted: ' + name);
+    alert('A form was submitted: ' + organization);
     event.preventDefault();
 
-    // addDoc(collection(db, "event"), {
-    //   name: name,
-    //   organization: organization,
-    //   start: start,
-    //   end: end,
-    //   location: location,
-    //   description: description
-    // }).then(console.log(name + organization + start + end + location+ description));
+    addDoc(collection(db, "Requests"), {
+      organization: organization,
+      info:info,
+      date:date,
+      description: description
+    }).then(console.log( organization + info + date +  description));
   }
   //here I will call the from.js file 
   const handleChangeInput = (event) =>{
@@ -35,16 +35,12 @@ function NameForm() {
       setOrganization(value);
     }
 
-    if(id === "start"){
-      setStart(value);
+    if(id === "info"){
+      setInfo(value);
     }
 
-    if(id === "end"){
-      setEnd(value);
-    }
-
-    if(id === "loc"){
-      setLocation(value);
+    if(id === "date"){
+      setDate(value);
     }
 
     if(id === "des"){
@@ -56,14 +52,14 @@ function NameForm() {
   return (
     <div className = "whole">
       <div className = "navbar">
-     <div className = "add-form">
-       {/* <Link to="/form"  className = "FormButton">Form</Link> */}
+        <div className = "add-form">
+          <Link to="/request_form"  className = "FormButton">Request Venue</Link>
 
-       </div>
-       <div className = "list">
-       {/* <Link to="/"  className = "FormButton">Events</Link> */}
+          </div>
+          <div className = "list">
+          <Link to="/"  className = "FormButton">Venues</Link>
 
-       </div>
+        </div>
      </div>
 
     <div className = "bigForm">
@@ -77,18 +73,21 @@ function NameForm() {
       </label>
       <label>
         Contact Info
-        
         <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Date
-       
+        Date: 
+        <br> 
+      </br>
         <input id = "date" type="date" name="date" placeholder = "When is your event? " onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Description
+        Description:
         <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
       </label>
+
+      <br>
+      </br>
       
       <button onClick = {handleSubmit}> Submit </button>
      

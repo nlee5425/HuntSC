@@ -9,6 +9,8 @@ function App() {
    
       <Routes>
         <Route path="/" element={<List/>}/>
+        {/* <Route path="/form" element = {<AddVenue/>}/> */}
+        <Route path="/request_form" element = {<NameForm/>}/>
       </Routes>
     
   );
