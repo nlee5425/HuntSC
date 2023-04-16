@@ -8,6 +8,7 @@ import AddVenue from './addVenue';
 import React, {useState, useEffect} from 'react';
 import firebase from './firebase';
 import Login from './Login.js';
+import Request from './request_list.js'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/" element={user ? <List user={user}/> : <Login/>}/>
           <Route path="/form" element = {<AddVenue/>}/>
           <Route path="/request_form" element = {<NameForm/>}/>
+          <Route path="/request_listing" element = {<Request/>}/>
         </Routes>
      </div>
     
