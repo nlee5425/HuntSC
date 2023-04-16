@@ -27,28 +27,27 @@ function List({user}) {
 
     <div className="whole">
       <div className="navbar">
-
-      <h1 class="message" className = "FormButton"> Hey, {user.displayName} </h1>
-
-        <div className = "add-form">
-
-          <Link to="/form"  className = "FormButton">Add Venue</Link>
-        </div>        
-
+        { <div className = "user-message">
+          <small> Heyyyy, {user.displayName} </small> 
+        </div> }
         <div className="add-form">
-          <Link to="/" className="FormButton">Venues</Link>
+          <Link to="/form" className="FormButton">Add Venue</Link>
+
         </div>
-        
+        <div className="list">
+          <Link to="/" className="FormButton">Venues</Link>
+
+        </div>
         <div className="add-form">
           <Link id="signout" className="FormButton" to="/"
             onClick={() => auth.signOut()}>Sign Out
           </Link>
         </div>
       </div>
-
-      <h2 className = "title">HuntSC</h2>
-
-      <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
+      <div className = "title-message">
+        <p className = "title">HuntSC</p>
+        <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
+      </div>
       <div className = "whole-list">
         <div>
         {venues.map((e, index) => { 
