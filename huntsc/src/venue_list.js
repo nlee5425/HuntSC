@@ -8,7 +8,9 @@ import './venue_list.css';
 import { auth } from './firebase';
 
 
-function List() {
+
+
+function List({user}) {
   const [venues, setVenues] = useState([]);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function List() {
     <div className="whole">
       <div className="navbar">
 
+<<<<<<< Updated upstream
         {/* <div className = "logo">
           <h1> hi, user </h1>
         </div> */}
@@ -33,6 +36,21 @@ function List() {
         <div className = "add-form">
 
           <Link to="/form"  className = "FormButton">Add Venue</Link>
+=======
+        
+
+        <div className="add-form">
+          <Link to="/" className="FormButton">Venues</Link>
+          <h1 class="message"> Hey, {user.displayName} </h1>
+        </div>
+        
+       
+
+
+        {/* {<h1 class="message"> Hey, {user.displayName} </h1> } */}
+        <div className="add-form">
+          <Link to="/form" className="FormButton">Add Venue</Link>
+>>>>>>> Stashed changes
 
         </div>
         <div className = "list">

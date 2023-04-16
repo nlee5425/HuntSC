@@ -1,20 +1,13 @@
+.whole-list {
+    display: flex;
+    flex-direction: column;
+}
+
 title {
     font-family: 'Shrikhand', cursive;
-    font-size: 500px;
-
 }
 
 h2 {
     font-family: 'Shrikhand', cursive;
-    font-size: 70px;
-}
 
-h3 {
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
-
-.whole-list {
-    display: flex;
-    flex-direction: column;
 }

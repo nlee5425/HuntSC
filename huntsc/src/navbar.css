@@ -13,13 +13,20 @@
 }
 
 
-.logo{
-    color:white;
+.message{
     padding-top: 10px;
-    top: 0;
-    font-size: 15px;
-    letter-spacing: 3px;
-    cursor: pointer;
+    /* margin-right: 30px; */
+    width: 120px;
+    background-color: transparent;
+    top: 0px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    
 }
 
 .add-form{
