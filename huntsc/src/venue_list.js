@@ -33,7 +33,10 @@ function List() {
 
         </div>
      </div>
-      <h1 className = "title">Venues</h1>
+
+      <h2 className = "title">HuntSC</h2>
+
+      <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
       <div className = "whole-list">
         <div>
         {venues.map((e, index) => { 
