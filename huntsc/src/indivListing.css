@@ -20,9 +20,8 @@
     display: inline-block;
     font-family: 'Raleway', sans-serif;
     border-radius: 20px;
-    width: 40%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    width: inline-size;
+    padding: 1%;
 }
 .header{
     text-align: center;
@@ -38,32 +37,25 @@
     font-family: 'Raleway', sans-serif;
 }
 
-
-  
-
-
 .button {
     display: inline-block;
     font-size: 130%;
     font-family: 'Raleway', sans-serif;
-    border-radius: 20px;
-    width: 10%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border: 3px solid black;
-    
-
-}
-.button:hover{
-    text-shadow: black;
-    background-color: black;
+    /* border-radius: 20px;
+    padding: 1%;
+    border: 3px solid black; */
 }
 
 #linked {
     text-decoration: none;
     color: black;
+    width: min-content;
+    border-radius: 20px;
+    padding: 10%;
+    border: 3px solid black;
 }
 
 .button:hover #linked {
     color: pink;
+    background-color: black;
 }

@@ -13,12 +13,12 @@ function Events(props) {
             </div>
 
             <div className = "VenueInfo"> 
-                <h3 className="right">Max Capacity: {props.capacity} </h3>
-                <h3 className="right">Contact: {props.contact}</h3>  
-                <h3 className="right">Other: {props.other} </h3>
-                <h3 className="right">Requirements: {props.requirements} </h3>
-                <h3 className="right">Security Deposit: ${props.deposit} </h3>
-                <h3 className="right">Price: ${props.venue_price} </h3>
+                <h3>Max Capacity: {props.capacity} </h3>
+                <h3>Contact: {props.contact}</h3>  
+                <h3>Other: {props.other} </h3>
+                <h3>Requirements: {props.requirements} </h3>
+                <h3>Security Deposit: ${props.deposit} </h3>
+                <h3>Price: ${props.venue_price} </h3>
                 
             </div>
 

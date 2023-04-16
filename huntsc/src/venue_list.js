@@ -21,9 +21,8 @@ function List() {
 
   return (
     <div>
+      <h1 className = "title">Venues</h1>
       <div className = "whole-list">
-
-        <h1 className = "title">Venues</h1>
         <div>
         {venues.map((e, index) => { 
             return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} deposit={e.deposit} venue_price={e.venue_price} other={e.other}/>
