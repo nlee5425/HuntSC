@@ -19,11 +19,24 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-// export const auth = firebase.auth();
-// const provider = new firebase.auth.GoogleAuthProvider();
-
+const app = firebase.initializeApp(firebaseConfig);
+export const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({prompt: 'select_account'});
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export default firebase;
 export const db  = getFirestore(app);
-// provider.setCustomParameters({prompt: 'select_account'});
-// export const signInWithGoogle = () => auth.signInWithPopup(provider);
-// export default firebase;
+
+
+
+/*
+
+const app = firebase.initializeApp(firebaseConfig);
+export const auth = firebase.auth();
+const provider = new firebase.auth.GoogleAuthProvider();
+provider.setCustomParameters({prompt: 'select_account'});
+export const signInWithGoogle = () => auth.signInWithPopup(provider);
+export default firebase;
+export const db = getFirestore(app);
+
+*/

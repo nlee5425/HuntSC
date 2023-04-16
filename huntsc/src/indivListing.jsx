@@ -9,16 +9,6 @@ function Events(props) {
     // console.log(props.start)
     return (
         <div className = "whole">
-            <div className = "navbar">
-                <div className = "add-form">
-                <Link to="/form"  className = "FormButton">Add Venue</Link>
-
-                </div>
-                <div className = "list">
-                <Link to="/"  className = "FormButton">Venues</Link>
-
-                </div>
-            </div>
             <div className = "OneListing">
                 
                 <div className = "header">

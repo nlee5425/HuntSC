@@ -50,27 +50,23 @@ function NameForm() {
   }
 
   return (
-    <div className = "whole">
-      <div className = "navbar">
-
-       
-
-        <div className = "add-form">
-          <Link to="/form"  className = "FormButton">Add Venue</Link>
+    <div className="whole">
+      <div className="navbar">
+        <div className="add-form">
+          <Link to="/form" className="FormButton">Add Venue</Link>
 
         </div>
-        <div className = "list">
-          <Link to="/"  className = "FormButton">Venues</Link>
+        <div className="list">
+          <Link to="/" className="FormButton">Venues</Link>
 
         </div>
-        <div className = "button">
-          {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
-          <button>Sign Out</button>
+        <div className="add-form">
+          <Link id="signout" className="FormButton" to="/"
+            onClick={() => auth.signOut()}>Sign Out
+          </Link>
 
         </div>
-       
-        
-     </div>
+      </div>
 
     <div className = "bigForm">
 
