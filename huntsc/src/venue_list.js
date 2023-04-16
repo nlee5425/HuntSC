@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
 import Events from './indivListing.jsx';
+import {Link} from "react-router-dom";
+import './navbar.css';
 
 
 
@@ -20,6 +22,16 @@ function List() {
 
   return (
     <div>
+      <div className = "navbar">
+        <div className = "add-form">
+          <Link to="/form"  className = "FormButton">Add Form</Link>
+
+          </div>
+          <div className = "list">
+          <Link to="/"  className = "FormButton">Venues</Link>
+
+        </div>
+     </div>
       <div className = "whole-list">
 
         <h1 className = "title">Venues</h1>
