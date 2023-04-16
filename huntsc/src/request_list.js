@@ -1,34 +1,32 @@
 import { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from './firebase';
-import Events from './indivListing.jsx';
 import { Link } from "react-router-dom";
 import './navbar.css';
 import './venue_list.css';
 import { auth } from './firebase';
+import Requestindiv from './requestlisting';
 
 
 
 
-function List({user}) {
-  const [venues, setVenues] = useState([]);
 
-  useEffect(() => {
-    const eventcol = collection(db, "Venue");
-    getDocs(eventcol).then(snapshot => {
-      const docsArray = snapshot.docs.map(d => { return d.data() })
-      console.log(docsArray);
-      setVenues(docsArray);
-    });
-  }, [])
+function Request({user}) {
+  const [requests, setRequests] = useState([]);
+  const requestsCol = collection(db, "Requests");
+  const q = query(requestsCol, where("email", "==" , user.email));
 
+  const usersrequests = onSnapshot(q, snapshot => {
+    const data = snapshot.docs.map(change => change.data());
+    data.sort((a,b) => a.timestamp = b.timestamp);
+    setRequests(data);
+  });
 
   return (
-
     <div className="whole">
       <div className="navbar">
         { <div className = "user-message">
-          <small> Heyyyy, {user.displayName} </small> 
+          {/* <small> Heyyyy, {user.displayName} </small>  */}
         </div> }
         <div className="add-form">
           <Link to="/form" className="FormButton">Add Venue</Link>
@@ -43,19 +41,17 @@ function List({user}) {
             onClick={() => auth.signOut()}>Sign Out
           </Link>
         </div>
-
         <div className = "add-form">
-          <Link to = "/request_listing">View Requests</Link>
+          <Link to = "/request_listing" className = "FormButton">View Requests</Link>
         </div>
       </div>
       <div className = "title-message">
-        <p className = "title">HuntSC</p>
-        <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
+        <p className = "title">Your Requests</p>
       </div>
       <div className = "whole-list">
         <div>
-        {venues.map((e, index) => { 
-            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} deposit={e.deposit} venue_price={e.venue_price} other={e.other}/>
+        {requests.map((e, index) => { 
+            return <Requestindiv key={index} date={e.date} description={e.description} info={e.info} organization = {e.organization}/>
         })}
         </div>
       </div>
@@ -63,4 +59,4 @@ function List({user}) {
   );
 }
 
-export default List;
+export default Request;

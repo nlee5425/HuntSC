@@ -132,9 +132,9 @@ function AddVenue() {
             Other Info
             <input id="other" type="text" name="des" placeholder="Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)} />
           </label>
-          <div >
+          <div className='button-cont'>
 
-            <Link className = "submitButton" to="/" onClick={handleSubmit} className = "finish-buttons"> Submit </Link>
+            <Link to="/" onClick={handleSubmit} className="submit-button"> Submit </Link>
 
             <button type = "reset" value = "reset" className = "finish-buttons"> Reset </button>
           </div>
