@@ -7,11 +7,12 @@ import Venue from './addVenue.js';
 import AddVenue from './addVenue';
 function App() {
   return (
-      <AddVenue/>
-      // <Routes>
-      //   {/* <Route path="/" element={<List/>}/> */}
-      //   {/* <Route path="/vend" element = {<Venue/>}/> */}
-      // </Routes>
+   
+      <Routes>
+        <Route path="/" element={<List/>}/>
+        {/* <Route path="/form" element = {<AddVenue/>}/> */}
+        <Route path="/request_form" element = {<NameForm/>}/>
+      </Routes>
     
   );
 }

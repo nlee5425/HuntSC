@@ -6,6 +6,8 @@ import { collection, addDoc } from "firebase/firestore";
 //import { Outlet, Link } from "react-router-dom";
 import './App.css';
 import './Form-Requester.css';
+import './navbar.css';
+import {Link} from "react-router-dom";
 
 
 function NameForm() {
@@ -50,14 +52,14 @@ function NameForm() {
   return (
     <div className = "whole">
       <div className = "navbar">
-     <div className = "add-form">
-       {/* <Link to="/form"  className = "FormButton">Form</Link> */}
+        <div className = "add-form">
+          <Link to="/form"  className = "FormButton">Add Venue</Link>
 
-       </div>
-       <div className = "list">
-       {/* <Link to="/"  className = "FormButton">Events</Link> */}
+          </div>
+          <div className = "list">
+          <Link to="/"  className = "FormButton">Venues</Link>
 
-       </div>
+        </div>
      </div>
 
     <div className = "bigForm">
