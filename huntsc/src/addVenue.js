@@ -1,11 +1,10 @@
 import { useState, React } from 'react';
+import { Link } from 'react-router-dom';
 import { db } from './firebase';
 import { collection, addDoc } from "firebase/firestore";
 // import { Outlet, Link } from "react-router-dom";
 import './App.css';
 import './addVenue.css';
-import {Link} from "react-router-dom";
-
 
 function AddVenue() {
   const [name, setName] = useState("");
@@ -36,7 +35,7 @@ function AddVenue() {
   //here I will call the from.js file 
   const handleChangeInput = (event) =>{
     const {id , value} = event.target;
-
+    
     if(id === "org"){
       setName(value);
     }
@@ -76,16 +75,20 @@ function AddVenue() {
     // Jadrian: This is the navigation bar 
     <div className = "whole">
       <div className = "navbar">
-                <div className = "add-form">
-                <Link to="/form"  className = "FormButton">Add Venue</Link>
+     <div className = "add-form">
+       <Link to="/form"  className = "FormButton">Add Venue</Link>
 
-                </div>
-                <div className = "list">
-                <Link to="/"  className = "FormButton">Venues</Link>
+       </div>
+       <div className = "list">
+       <Link to="/"  className = "FormButton">Venues</Link>
 
-                </div>
-      </div>
+       </div>
+       <div className = "button">
+          {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
+          <button>Sign Out</button>
 
+        </div>
+     </div>
     <div className = "bigForm">
 
 
@@ -93,14 +96,13 @@ function AddVenue() {
       <h1>Add a Venue</h1>
       <label>
         Organization Name:
-        {/* <input id = "org" type="text" name="organization"  placeholder = "Tell us about your blablabla!" onChange={(e) => handleChangeInput(e)}/> */}
-        <input id = "org" type="text" name="organization"  placeholder = "Name of Venue or Organization" onChange={(e) => handleChangeInput(e)}/>
+        <input required id = "org" type="text" name="organization"  placeholder = "Name of Venue or Organization" onChange={(e) => handleChangeInput(e)} ></input>
+
       </label>
 
       <label>
         Contact Info
-        {/* <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/> */}
-        <input id = "contact" type="text" name="info" placeholder = "(XXX)XXX-XXXX or XXXXX@gmail.com" onChange={(e) => handleChangeInput(e)}/>
+        <input required id = "contact" type="text" name="info" placeholder = "(XXX)XXX-XXXX or XXXXX@gmail.com" onChange={(e) => handleChangeInput(e)}></input>
       </label>
     
     <label className='fryft2'>

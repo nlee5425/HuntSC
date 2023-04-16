@@ -5,7 +5,7 @@ import Events from './indivListing.jsx';
 import {Link} from "react-router-dom";
 import './navbar.css';
 import './venue_list.css';
-
+import { auth } from './firebase';
 
 
 function List() {
@@ -24,7 +24,13 @@ function List() {
   return (
     <div>
       <div className = "navbar">
+
+        {/* <div className = "logo">
+          <h1> hi, user </h1>
+        </div> */}
+
         <div className = "add-form">
+
           <Link to="/form"  className = "FormButton">Add Venue</Link>
 
           </div>
@@ -32,8 +38,16 @@ function List() {
           <Link to="/"  className = "FormButton">Venues</Link>
 
         </div>
+        <div className = "button">
+          {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
+          <button>Sign Out</button>
+
+        </div>
      </div>
-      <h1 className = "title">Venues</h1>
+
+      <h2 className = "title">HuntSC</h2>
+
+      <h3 className = "tagline"> Get the party started with HuntSC - your ultimate venue-finding platform! </h3>
       <div className = "whole-list">
         <div>
         {venues.map((e, index) => { 
