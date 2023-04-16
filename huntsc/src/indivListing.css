@@ -1,32 +1,61 @@
 .OneListing{
     font-family: 'Montserrat';
-    background-color:red;
-    border: 1px solid black;
+    background: linear-gradient(#e66465, #9198e5);
+    border: 5px solid black;
     border-radius: 30px;
     text-align: center;
     padding: 20px;
     margin: 20px;
-    line-height: 15px;
-    display: inline;
+    /* line-height: 15px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
 }
-
+.fryft{
+    margin-bottom: 5px;
+    border: 2px solid blue;
+    display: inline-block;
+    background-color: lightblue;
+}
 .header{
     background-color: yellow;
     text-align: center;
+    display: inline-block;
+    width: 20%;
 }
 
 .VenueInfo{
-    background-color: blue;
-
+    background-color: lightblue;
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+    padding-left: 4%;
 }
 
-.button{
-    border: 1px solid black;
-}
 
   
 
 
 .button {
+    border: 1px solid black;
+    display: inline-block;
     background-color: red;
+    font-size: 130%;
+    
+    border-radius: 20px;
+    width: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+
+}
+.button:hover{
+    text-shadow: black;
+    border: 3px solid black;
+}
+
+#linked {
+    text-decoration: none;
 }
