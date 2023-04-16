@@ -70,3 +70,9 @@ info
   width: 30px;
   cursor: pointer;
 }
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
