@@ -6,10 +6,11 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className = "list">
-       <Link to="/"  className = "FormButton">Venues</Link>
-
-    </div>
+   
+      <Routes>
+        <Route path="/" element={<List/>}/>
+      </Routes>
+    
   );
 }
 

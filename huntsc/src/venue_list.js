@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
-import {Events} from './indivListing.jsx';
+import Events from './indivListing.jsx';
 
 
 
@@ -25,7 +25,7 @@ function List() {
         <h1 className = "title">Venues</h1>
         <div>
         {venues.map((e, index) => { 
-            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} security-deposit={e.security-deposit} venue_price={e.venue_price} other={e.other}/>
+            return <Events key={index} name={e.name} fryft={e.fryft} capacity={e.capacity} contact={e.contact} requirements={e.requirements} deposit={e.deposit} venue_price={e.venue_price} other={e.other}/>
         })}
         </div>
       </div>
