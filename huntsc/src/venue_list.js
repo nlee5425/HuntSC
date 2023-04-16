@@ -28,7 +28,7 @@ function List() {
       <div className = "logo">
           <h1> hi, user </h1>
         </div>
-        
+
         <div className = "add-form">
 
           <Link to="/form"  className = "FormButton">Add Venue</Link>
