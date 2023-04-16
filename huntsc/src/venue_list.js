@@ -5,7 +5,7 @@ import Events from './indivListing.jsx';
 import {Link} from "react-router-dom";
 import './navbar.css';
 import './venue_list.css';
-
+import { auth } from './firebase';
 
 
 function List() {
@@ -24,12 +24,23 @@ function List() {
   return (
     <div>
       <div className = "navbar">
+
+        <div className = "logo">
+          <h1> hi, user </h1>
+        </div>
+
         <div className = "add-form">
+
           <Link to="/form"  className = "FormButton">Add Venue</Link>
 
           </div>
           <div className = "list">
           <Link to="/"  className = "FormButton">Venues</Link>
+
+        </div>
+        <div className = "button">
+          {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
+          <button>Sign Out</button>
 
         </div>
      </div>
