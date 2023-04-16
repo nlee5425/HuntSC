@@ -25,7 +25,7 @@ function List() {
     <div>
       <div className = "navbar">
 
-      <div className = "logo">
+        <div className = "logo">
           <h1> hi, user </h1>
         </div>
 
