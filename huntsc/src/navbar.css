@@ -12,8 +12,11 @@
     
 }
 
+
 .logo{
     color:white;
+    padding-top: 10px;
+    top: 0;
     font-size: 15px;
     letter-spacing: 3px;
     cursor: pointer;
@@ -42,7 +45,7 @@
     color: #EFC3E6;
 }
 
-.FormButton {
+.FormButton, .signout {
     text-decoration: none;
     color: black;
 }
@@ -63,9 +66,11 @@
     background-color: purple;
 }
 
-.button{
+.sign-button:hover{
+    background-color: purple;
 
 }
+
 
 .whole-list {
     margin-top: 50px;

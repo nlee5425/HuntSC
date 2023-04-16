@@ -2,32 +2,36 @@ import { useEffect, useState } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from './firebase';
 import Events from './indivListing.jsx';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './navbar.css';
 import './venue_list.css';
 import { auth } from './firebase';
 
 
 function List() {
-    const [venues, setVenues] = useState([]);
+  const [venues, setVenues] = useState([]);
 
   useEffect(() => {
     const eventcol = collection(db, "Venue");
     getDocs(eventcol).then(snapshot => {
-      const docsArray = snapshot.docs.map(d => {return d.data()})
+      const docsArray = snapshot.docs.map(d => { return d.data() })
       console.log(docsArray);
       setVenues(docsArray);
     });
-  },[])
-  
+  }, [])
+
 
   return (
-    <div>
-      <div className = "navbar">
 
-        {/* <div className = "logo">
+    <div className="whole">
+      <div className="navbar">
+        <div className="add-form">
+          <Link to="/form" className="FormButton">Add Venue</Link>
+        </div>
+
+        <div className = "logo">
           <h1> hi, user </h1>
-        </div> */}
+        </div>
 
         <div className = "add-form">
 
@@ -38,12 +42,12 @@ function List() {
           <Link to="/"  className = "FormButton">Venues</Link>
 
         </div>
-        <div className = "button">
-          {/* <button onClick={() => auth.signOut()}>Sign Out</button> */}
-          <button>Sign Out</button>
-
+        <div className="add-form">
+          <Link id="signout" className="FormButton" to="/"
+            onClick={() => auth.signOut()}>Sign Out
+          </Link>
         </div>
-     </div>
+      </div>
 
       <h2 className = "title">HuntSC</h2>
 
@@ -55,7 +59,6 @@ function List() {
         })}
         </div>
       </div>
-
     </div>
   );
 }
