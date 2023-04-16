@@ -1,0 +1,27 @@
+body {
+    background-color: #F0E6EF;
+}
+
+form {
+    display: block;
+    background-color: #EFC3E6;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    padding: 20px 10px;
+    border-radius: 30px;
+
+}
+input {
+  width: 450px;
+  padding: 12px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}

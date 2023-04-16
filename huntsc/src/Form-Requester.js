@@ -1,9 +1,9 @@
 import { useState, React } from 'react';
-import { db } from './firebase';
-import { collection, addDoc } from "firebase/firestore";
-import { Outlet, Link } from "react-router-dom";
+//import { db } from './firebase';
+//import { collection, addDoc } from "firebase/firestore";
+//import { Outlet, Link } from "react-router-dom";
 import './App.css';
-import './form.css';
+import './Form-Requester.css';
 
 
 function NameForm() {
@@ -59,11 +59,11 @@ function NameForm() {
     <div className = "whole">
       <div className = "navbar">
      <div className = "add-form">
-       <Link to="/form"  className = "FormButton">Form</Link>
+       {/* <Link to="/form"  className = "FormButton">Form</Link> */}
 
        </div>
        <div className = "list">
-       <Link to="/"  className = "FormButton">Events</Link>
+       {/* <Link to="/"  className = "FormButton">Events</Link> */}
 
        </div>
      </div>
@@ -112,7 +112,7 @@ function NameForm() {
     </form>
 
     <div className = "FormButton">
-      <Link to="/"  className = "FormButton">View Events</Link>
+      {/* <Link to="/"  className = "FormButton">View Events</Link> */}
       </div>
     </div>
     </div>
