@@ -5,7 +5,7 @@ import { signInWithGoogle } from './firebase';
 
 const Login = () => {
     return ( // the Login component just contains a Log In button
-    
+    <div className='body'>
         <div className = "box"> 
             <h1>HuntSC</h1>
             <h1>Start Your Venue Hunt With Us!</h1>
@@ -13,6 +13,7 @@ const Login = () => {
                 Sign In With Google
             </button>
         </div>
+    </div>
    
         
     )
