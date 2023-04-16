@@ -12,6 +12,11 @@
 
 }
 
+p.title{
+    padding-bottom: 0;
+    margin-block-end: 0;
+}
+
 .tagline {
     font-size: 30px;
 }
