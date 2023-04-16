@@ -89,7 +89,7 @@ function AddVenue() {
     <div className = "bigForm">
 
 
-    <form onSubmit={handleSubmit} classNmae = "form">
+    <form onSubmit={handleSubmit}>
       <h1>Add a Venue</h1>
       <label>
         Organization Name:
@@ -128,8 +128,12 @@ function AddVenue() {
         Other Info
         <input id = "other" type="text" name="des" placeholder = "Tell us a bit about your venue!" onChange={(e) => handleChangeInput(e)}/>
       </label>
-      <button onClick = {handleSubmit}> Submit </button>
-      <input type="reset" value="Reset Form"/>
+
+      <div className = "buttons">
+        <button onClick = {handleSubmit} className = "finish-buttons"> Submit </button>
+        <button type="reset" value="Reset Form" className = "finish-buttons"> Reset </button>
+      </div>
+      
     
     
 

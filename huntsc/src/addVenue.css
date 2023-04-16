@@ -30,7 +30,7 @@ form {
     padding-left: 20px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-
+    text-align: center;
 }
 input {
   width: 450px;
@@ -53,11 +53,9 @@ info
  */
 
 
-.fryft2 {
-  display: grid;
-  grid-template-columns: 1fr 3.25fr;
-  grid-gap: 0px;
+ .fryft2 {
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 #question {
@@ -71,8 +69,9 @@ info
   cursor: pointer;
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
+.finish-buttons{
+  margin-left: 10px;
+  margin-right: 10px;
 }
+
 
