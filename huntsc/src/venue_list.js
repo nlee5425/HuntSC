@@ -44,7 +44,7 @@ function List({user}) {
           </Link>
         </div>
 
-        <div classNmae = "add-form">
+        <div className = "add-form">
           <Link to = "/request_listing">View Requests</Link>
         </div>
       </div>

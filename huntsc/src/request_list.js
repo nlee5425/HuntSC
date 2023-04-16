@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, query, where, onSnapshot } from 'firebase/firestore';
 import { db } from './firebase';
 import { Link } from "react-router-dom";
 import './navbar.css';
@@ -13,23 +13,20 @@ import Requestindiv from './requestlisting';
 
 function Request({user}) {
   const [requests, setRequests] = useState([]);
+  const requestsCol = collection(db, "Requests");
+  const q = query(requestsCol, where("email", "==" , user.email));
 
-  useEffect(() => {
-    const requestsCol = collection(db, "Requests");
-    const q = query(requestsCol, where("email", "==" , user.email));
-    getDocs(requestsCol).then(snapshot => {
-      const docsArray = snapshot.docs.map(d => { return d.data() })
-      console.log(docsArray);
-      setRequests(docsArray);
-    });
-  }, [])
-
+  const usersrequests = onSnapshot(q, snapshot => {
+    const data = snapshot.docs.map(change => change.data());
+    data.sort((a,b) => a.timestamp = b.timestamp);
+    setRequests(data);
+  });
 
   return (
     <div className="whole">
       <div className="navbar">
         { <div className = "user-message">
-          <small> Heyyyy, {user.displayName} </small> 
+          {/* <small> Heyyyy, {user.displayName} </small>  */}
         </div> }
         <div className="add-form">
           <Link to="/form" className="FormButton">Add Venue</Link>
@@ -44,7 +41,7 @@ function Request({user}) {
             onClick={() => auth.signOut()}>Sign Out
           </Link>
         </div>
-        <div classNmae = "add-form">
+        <div className = "add-form">
           <Link to = "/request_listing" className = "FormButton">View Requests</Link>
         </div>
       </div>

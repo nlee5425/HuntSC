@@ -29,7 +29,7 @@ function App() {
           <Route path="/" element={user ? <List user={user}/> : <Login/>}/>
           <Route path="/form" element = {<AddVenue/>}/>
           <Route path="/request_form" element = {<NameForm/>}/>
-          <Route path="/request_listing" element = {<Request/>}/>
+          <Route path="/request_listing" element = {<Request user={user}/>}/>
         </Routes>
      </div>
     
