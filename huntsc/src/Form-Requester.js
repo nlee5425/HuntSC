@@ -27,11 +27,9 @@ function NameForm() {
     //   description: description
     // }).then(console.log(name + organization + start + end + location+ description));
   }
+  //here I will call the from.js file 
   const handleChangeInput = (event) =>{
     const {id , value} = event.target;
-    if(id === "name"){
-      setName(value);
-    }
 
     if(id === "org"){
       setOrganization(value);
@@ -72,43 +70,28 @@ function NameForm() {
 
 
     <form onSubmit={handleSubmit}>
+        <h1>Request This Space</h1>
       <label>
-        Name:
-        <br />
-        <input id = "name" type="text" name="name" onChange={(e) => handleChangeInput(e)}/>
+        Organization Name:
+        <input id = "org" type="text" name="organization"  placeholder = "Tell us about your organization!" onChange={(e) => handleChangeInput(e)}/>
       </label>
-      <br />
       <label>
-        Organization:
-        <br />
-        <input id = "org" type="text" name="organization" onChange={(e) => handleChangeInput(e)}/>
+        Contact Info
+        
+        <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/>
       </label>
-      <br />
       <label>
-        Start time:
-        <br />
-        <input id = "start" type="text" name="start" onChange={(e) => handleChangeInput(e)}/>
+        Date
+       
+        <input id = "date" type="date" name="date" placeholder = "When is your event? " onChange={(e) => handleChangeInput(e)}/>
       </label>
-      <br />
       <label>
-        End time:
-        <br />
-        <input id = "end"type="text" name="end" onChange={(e) => handleChangeInput(e)}/>
+        Description
+        <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
       </label>
-      <br />
-      <label>
-        Location:
-        <br />
-        <input  id = "loc" type="text" name="location" onChange={(e) => handleChangeInput(e)} />
-      </label>
-      <br />
-      <label>
-        Description:
-        <br />
-        <input id = "des" type="text" name="description" onChange={(e) => handleChangeInput(e)}/>
-      </label>
-      <br />
-      <input type="submit" value="Submit" />
+      
+      <button onClick = {handleSubmit}> Submit </button>
+     
     </form>
 
     <div className = "FormButton">
