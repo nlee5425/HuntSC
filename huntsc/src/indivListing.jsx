@@ -9,7 +9,7 @@ function Events(props) {
         <div className = "OneListing">
             <div className = "header">
                 <h1>"{ props.name}"</h1>
-                <h3 className = "fryft">Fryft {props.fryft} </h3>
+                <h3 className = "fryft">Fryft Zone {props.fryft} </h3>
             </div>
 
             <div className = "VenueInfo"> 
