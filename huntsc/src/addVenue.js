@@ -120,11 +120,7 @@ function AddVenue() {
           </label>
           <label>
             Venue Capacity
-<<<<<<< Updated upstream
-            <input id="capacity" type="number" min="0" placeholder="What is your venue's capacity?" onChange={(e) => handleChangeInput(e)}/>
-=======
-            <input id="capacity" type="text" name="venue_cap" placeholder="What is your venue's capacity?" onChange={(e) => handleChangeInput(e)} required/>
->>>>>>> Stashed changes
+            <input id="capacity" type="number" min="0" placeholder="What is your venue's capacity?" onChange={(e) => handleChangeInput(e)} required/>
           </label>
 
           <label>
