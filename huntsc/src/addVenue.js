@@ -18,7 +18,7 @@ function AddVenue() {
 
   function handleSubmit(event) {
     alert('A form was submitted: ' + name);
-    event.preventDefault();
+    // event.preventDefault();
 
     addDoc(collection(db, "Venue"), {
       name: name,
@@ -92,6 +92,7 @@ function AddVenue() {
 
       <div className="bigForm">
         <form onSubmit={handleSubmit}>
+
           <h1>Add a Venue</h1>
           <label>
             Organization Name
@@ -132,7 +133,9 @@ function AddVenue() {
             <input id="other" type="text" name="des" placeholder="Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)} />
           </label>
           <div >
-            <button onClick={handleSubmit} className = "finish-buttons"> Submit </button>
+
+            <Link className = "submitButton" to="/" onClick={handleSubmit} className = "finish-buttons"> Submit </Link>
+
             <button type = "reset" value = "reset" className = "finish-buttons"> Reset </button>
           </div>
           
@@ -141,6 +144,7 @@ function AddVenue() {
           {/* TODO: onsubmit */}
 
         </form>
+
 
         <div className="FormButton">
           {/* <Link to="/"  className = "FormButton">View Events</Link> */}
