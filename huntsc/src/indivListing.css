@@ -1,0 +1,32 @@
+.OneListing{
+    font-family: 'Montserrat';
+    background-color:red;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    line-height: 15px;
+    display: inline;
+}
+
+.header{
+    background-color: yellow;
+    text-align: center;
+}
+
+.VenueInfo{
+    background-color: blue;
+
+}
+
+.button{
+    border: 1px solid black;
+}
+
+  
+
+
+.button {
+    background-color: red;
+}
