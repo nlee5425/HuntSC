@@ -75,6 +75,9 @@ function NameForm() {
           </Link>
 
         </div>
+        <div classNmae = "add-form">
+          <Link to = "/request_listing">View Requests</Link>
+        </div>
       </div>
 
     <div className = "bigForm">
