@@ -2,6 +2,9 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,4 +20,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+// export const auth = firebase.auth();
+// const provider = new firebase.auth.GoogleAuthProvider();
+
 export const db  = getFirestore(app);
+// provider.setCustomParameters({prompt: 'select_account'});
+// export const signInWithGoogle = () => auth.signInWithPopup(provider);
+// export default firebase;
