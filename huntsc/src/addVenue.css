@@ -13,7 +13,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
 
-    background-color: #F0E6EF;
+    /* background-color: #F0E6EF; */
 }
 
 form {
@@ -63,7 +63,7 @@ info
 
 
 #question {
-  width: 80%;
+  width: inline-size;
   margin-right: 0px;
   padding-right: 0;
 }
