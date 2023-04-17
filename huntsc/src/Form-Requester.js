@@ -6,7 +6,9 @@ import { collection, addDoc } from "firebase/firestore";
 import './App.css';
 import './Form-Requester.css';
 import './navbar.css';
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+
+
 function NameForm({user}) {
   const [organization, setOrganization] = useState("");
   const [info, setInfo] = useState("");
@@ -14,7 +16,8 @@ function NameForm({user}) {
   const [description, setDescription] = useState("");
   const[email, setEmail] = useState("");
   function handleSubmit(event) {
-    alert('A form was unfinished: ' + organization);
+    alert('A form was uiefhishfhsifhhifherhi: ' + organization);
+
     addDoc(collection(db, "Requests"), {
       organization: organization,
       info:info,
@@ -86,7 +89,7 @@ function NameForm({user}) {
       </label>
       <label>
         Description:
-        <input id = "des" type="text" name="des" placeholder = "Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)}/>
+        <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
         Email:
@@ -96,7 +99,9 @@ function NameForm({user}) {
       </label>
       <br>
       </br>
-      <Link className="add-venue-button" to="/" onClick = {handleSubmit}> Submit </Link>
+      
+      <Link to="/" onClick = {handleSubmit}> Submit </Link>
+     
     </form>
     <div className = "FormButton">
       {/* <Link to="/"  className = "FormButton">View Events</Link> */}

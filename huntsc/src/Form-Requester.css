@@ -5,22 +5,18 @@ body {
 h1 {
     font-family: 'Shrikhand', cursive;
 }
-.submission {
-    border: 2px solid black;
-    width: 30%;
-    height: line-height;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-    font-weight: lighter;
-    padding-top: 4.5px;
-    padding-bottom: 4.5px;
+
+button {
     font-family: 'Raleway', sans-serif;
-    background-color: #EFC3E6;
+    background-color: #F0A6CA;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 5px;
     cursor: pointer;
-  }
-.submission:hover {
+}
+
+button:hover {
     background: white;
     color: black;
 }
@@ -35,7 +31,7 @@ form {
     margin-top: 5em;
     padding: 20px 10px;
     border-radius: 30px;
-    align-items: center;
+
 }
 input {
   width: 450px;
@@ -48,36 +44,3 @@ input[type=text]:focus {
     background-color: F0E6EF;
     border: 3px white;
 }
-.add-venue-button {
-    border: 2px solid black;
-    height: line-height;
-    font-size: 14px;
-    text-decoration: none;
-    color: black;
-    font-weight: lighter;
-    padding-top: 4.5px;
-    padding-bottom: 4.5px;
-    font-family: 'Raleway', sans-serif;
-    background-color: #EFC3E6;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100px;
-  }
-  .add-venue-button:hover {
-    background: white;
-    color: black;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
