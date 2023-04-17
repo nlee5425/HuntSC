@@ -6,7 +6,7 @@ import { collection, addDoc } from "firebase/firestore";
 import './App.css';
 import './addVenue.css';
 
-function AddVenue() {
+function AddVenue({user}) {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [capacity, setCapacity] = useState("");
@@ -74,20 +74,27 @@ function AddVenue() {
     // Jadrian: This is the navigation bar 
     <div className="whole">
       <div className="navbar">
+        { <div className = "user-message">
+          <small> Heyyyy, {user.displayName} </small> 
+        </div> }
         <div className="add-form">
           <Link to="/form" className="FormButton">Add Venue</Link>
 
         </div>
-
         <div className="list">
           <Link to="/" className="FormButton">Venues</Link>
 
+        </div>
+        <div className = "add-form">
+          <Link to = "/request_listing" className = "FormButton">View Requests</Link>
         </div>
         <div className="add-form">
           <Link id="signout" className="FormButton" to="/"
             onClick={() => auth.signOut()}>Sign Out
           </Link>
         </div>
+
+        
       </div>
 
       <div className="bigForm">

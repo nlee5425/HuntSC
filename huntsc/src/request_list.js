@@ -26,7 +26,7 @@ function Request({user}) {
     <div className="whole">
       <div className="navbar">
         { <div className = "user-message">
-          {/* <small> Heyyyy, {user.displayName} </small>  */}
+          <small> Heyyyy, {user.displayName} </small> 
         </div> }
         <div className="add-form">
           <Link to="/form" className="FormButton">Add Venue</Link>
@@ -36,14 +36,15 @@ function Request({user}) {
           <Link to="/" className="FormButton">Venues</Link>
 
         </div>
+        <div className = "add-form">
+          <Link to = "/request_listing" className = "FormButton">View Requests</Link>
+        </div>
         <div className="add-form">
           <Link id="signout" className="FormButton" to="/"
             onClick={() => auth.signOut()}>Sign Out
           </Link>
         </div>
-        <div className = "add-form">
-          <Link to = "/request_listing" className = "FormButton">View Requests</Link>
-        </div>
+
       </div>
       <div className = "title-message">
         <p className = "title">Your Requests</p>

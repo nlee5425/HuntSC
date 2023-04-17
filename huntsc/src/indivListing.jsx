@@ -29,7 +29,7 @@ function Events(props) {
                     </div>
     
                     <li className = "button">
-                        <Link id="linked" to= "/request_form">Request</Link>
+                        <Link id="linked" to= "/request_form" name = {props.name}>Request</Link>
                     </li>
                 </div>
             </div>

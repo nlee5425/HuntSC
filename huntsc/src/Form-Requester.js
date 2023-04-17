@@ -10,7 +10,7 @@ import './navbar.css';
 import {Link} from "react-router-dom";
 
 
-function NameForm() {
+function NameForm({props, user}) {
   const [organization, setOrganization] = useState("");
   const [info, setInfo] = useState("");
   const [date, setDate] = useState("");
@@ -61,6 +61,9 @@ function NameForm() {
   return (
     <div className="whole">
       <div className="navbar">
+        { <div className = "user-message">
+          <small> Heyyyy, {user.displayName} </small> 
+        </div> }
         <div className="add-form">
           <Link to="/form" className="FormButton">Add Venue</Link>
 
@@ -69,15 +72,15 @@ function NameForm() {
           <Link to="/" className="FormButton">Venues</Link>
 
         </div>
+        <div className = "add-form">
+          <Link to = "/request_listing" className = "FormButton">View Requests</Link>
+        </div>
         <div className="add-form">
           <Link id="signout" className="FormButton" to="/"
             onClick={() => auth.signOut()}>Sign Out
           </Link>
+        </div>
 
-        </div>
-        <div classNmae = "add-form">
-          <Link to = "/request_listing">View Requests</Link>
-        </div>
       </div>
 
     <div className = "bigForm">

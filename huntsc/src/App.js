@@ -27,8 +27,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={user ? <List user={user}/> : <Login/>}/>
-          <Route path="/form" element = {<AddVenue/>}/>
-          <Route path="/request_form" element = {<NameForm/>}/>
+          <Route path="/form" element = {<AddVenue user={user}/>}/>
+          <Route path="/request_form" element = {<NameForm user={user}/>}/>
           <Route path="/request_listing" element = {<Request user={user}/>}/>
         </Routes>
      </div>
