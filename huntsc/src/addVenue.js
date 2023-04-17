@@ -112,12 +112,7 @@ function AddVenue({user}) {
             <input id="contact" type="text" name="info" placeholder="(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)} required/>
           </label>
 
-          <label className='fryft2'>
-            <div id="question">Within Fryft?</div>
-            <div id="fryft3">
-              <input id="fryft" type="checkbox" name="checkbox" value="" onChange={(e) => handleChangeInput(e)} required/>
-            </div>
-          </label>
+          
           <label>
             Venue Price
             <input id="venue_price" type="number" min="0" step="any" placeholder = "Ex: 1000" onChange={(e) => handleChangeInput(e)} required/>
@@ -138,6 +133,12 @@ function AddVenue({user}) {
           <label>
             Other Info
             <input id="other" type="text" name="des" placeholder="Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)} />
+          </label>
+          <label className='fryft2'>
+            <div id="question">Within Fryft?</div>
+            <div id="fryft3">
+              <input id="fryft" type="checkbox" name="checkbox" value="" onChange={(e) => handleChangeInput(e)} required/>
+            </div>
           </label>
           <div className='button-cont'>
 

@@ -1,16 +1,31 @@
-
 body {
     background: #F0A6CA;
-
 }
-
+.body {
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnHTkF-_Aq4ehNMGAAnECSdOQmg2ZtzIJdCSXBs11cA&s'); */
+    background-image: url("https://assets-global.website-files.com/5e39e095596498a8b9624af1/5f6e93d250a6d04f4eae9f02_Backgrounds-WFU-thumbnail-(size).jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box{
+   border-radius: 15px;
+   border: 3px solid black;
+   padding-bottom: 25px;
+   padding-left: 25px;
+   padding-right: 25px;
+   /* margin-top: 50%; */
+}
 h1 {
     font-family: 'Shrikhand', cursive;
 }
-
 button {
     font-family: 'Raleway', sans-serif;
     background-color: #EFC3E6;
+    border-color: black;
     border-radius: 5px;
     border-width: 2px;
     padding: 5px;

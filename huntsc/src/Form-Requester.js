@@ -1,5 +1,4 @@
-import { doc, setDoc } from "firebase/firestore"; 
-
+import { doc, setDoc } from "firebase/firestore";
 import { useState, React } from 'react';
 import { db, auth } from './firebase';
 import { collection, addDoc } from "firebase/firestore";
@@ -7,19 +6,15 @@ import { collection, addDoc } from "firebase/firestore";
 import './App.css';
 import './Form-Requester.css';
 import './navbar.css';
-import {Link} from "react-router-dom";
-
-
-function NameForm({props, user}) {
+import { Link } from "react-router-dom";
+function NameForm({user}) {
   const [organization, setOrganization] = useState("");
   const [info, setInfo] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
   const[email, setEmail] = useState("");
-
   function handleSubmit(event) {
-    alert('A form was uiefhishfhsifhhifherhi: ' + organization);
-
+    alert('A form was unfinished: ' + organization);
     addDoc(collection(db, "Requests"), {
       organization: organization,
       info:info,
@@ -27,37 +22,27 @@ function NameForm({props, user}) {
       description: description,
       email:email
     }).then(console.log( organization + info + date +  description));
-    
     // code to redirect back to the venue list page
-
-
-    
   }
-  //here I will call the from.js file 
+  //here I will call the from.js file
   const handleChangeInput = (event) =>{
     const {id , value} = event.target;
-
     if(id === "org"){
       setOrganization(value);
     }
-
     if(id === "info"){
       setInfo(value);
     }
-
     if(id === "date"){
       setDate(value);
     }
-
     if(id === "des"){
       setDescription(value);
     }
     if(id === "email"){
         setEmail(value);
       }
-
   }
-
   return (
     <div className="whole">
       <div className="navbar">
@@ -82,10 +67,7 @@ function NameForm({props, user}) {
         </div>
 
       </div>
-
     <div className = "bigForm">
-
-
     <form>
         <h1>Request This Space</h1>
       <label>
@@ -97,31 +79,25 @@ function NameForm({props, user}) {
         <input id = "info" type="text" name="info" placeholder = "(XXX)XXX-XXXX" onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
-        Date: 
-        <br> 
+        Date:
+        <br>
       </br>
         <input id = "date" type="date" name="date" placeholder = "When is your event? " onChange={(e) => handleChangeInput(e)}/>
       </label>
       <label>
         Description:
-        <input id = "des" type="text" name="des" palceholder = "Tell us a bit about your evnet!" onChange={(e) => handleChangeInput(e)}/>
+        <input id = "des" type="text" name="des" placeholder = "Tell us a bit about your event!" onChange={(e) => handleChangeInput(e)}/>
       </label>
-
       <label>
         Email:
-        <br> 
+        <br>
       </br>
-        <input id = "email" type="email" name="email" palceholder = "A good email." onChange={(e) => handleChangeInput(e)}/>
+        <input id = "email" type="email" name="email" placeholder = "A good email." onChange={(e) => handleChangeInput(e)}/>
       </label>
-
-
       <br>
       </br>
-      
-      <Link to="/" onClick = {handleSubmit}> Submit </Link>
-     
+      <Link className="add-venue-button" to="/" onClick = {handleSubmit}> Submit </Link>
     </form>
-
     <div className = "FormButton">
       {/* <Link to="/"  className = "FormButton">View Events</Link> */}
       </div>
@@ -129,5 +105,4 @@ function NameForm({props, user}) {
     </div>
   );
 };
-
 export default NameForm;
