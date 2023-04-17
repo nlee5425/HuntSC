@@ -11,7 +11,7 @@ function AddVenue({user}) {
   const [contact, setContact] = useState("");
   const [capacity, setCapacity] = useState("");
   const [deposit, setDeposit] = useState("");
-  const [fryft, setFryft] = useState("");
+  const [fryft, setFryft] = useState(true);
   const [other, setOther] = useState("");
   const [requirements, setRequirements] = useState("");
   const [venue_price, setVenue_Price] = useState("");
@@ -52,6 +52,7 @@ function AddVenue({user}) {
     }
 
     if(id === "fryft"){
+      
       setFryft(value);
     }
 
@@ -137,7 +138,7 @@ function AddVenue({user}) {
           <label className='fryft2'>
             <div id="question">Within Fryft?</div>
             <div id="fryft3">
-              <input id="fryft" type="checkbox" name="checkbox" value="" onChange={(e) => handleChangeInput(e)} required/>
+              <input id="fryft" type="checkbox" name="checkbox" value="" onChange={(e) => handleChangeInput(e)}/>
             </div>
           </label>
           <div className='button-cont'>
